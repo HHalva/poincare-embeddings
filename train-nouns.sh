@@ -6,7 +6,7 @@
 # LICENSE file in the root directory of this source tree.
 # Script to reproduct results
 
-DIMS="10"
+DIMS="500"
 MODEL="lorentz"
 
 while true; do
@@ -37,7 +37,7 @@ python3 embed.py \
   -negs 50 \
   -burnin 20 \
   -dampening 0.75 \
-  -ndproc 4 \
+  -ndproc 10 \
   -eval_each 100 \
   -fresh \
   -sparse \
