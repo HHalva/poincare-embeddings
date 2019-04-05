@@ -7,7 +7,7 @@
 # Script to reproduct results
 
 DIMS="10"
-MODEL="lorentz"
+MODEL="euclidean"
 
 while true; do
   case "$1" in
@@ -25,6 +25,7 @@ USAGE="usage: ./train-nouns.sh -d <dim> -m <model>
 "
 
 case "$MODEL" in
+  "euclidean" );;
   "lorentz" ) EXTRA_ARGS=("-lr" "0.5" "-no-maxnorm");;
   "poincare" ) EXTRA_ARGS=("-lr" "1.0");;
   * ) echo "$USAGE"; exit 1;;
@@ -37,7 +38,7 @@ python3 embed.py \
   -negs 50 \
   -burnin 20 \
   -dampening 0.75 \
-  -ndproc 4 \
+  -ndproc 10 \
   -eval_each 100 \
   -fresh \
   -sparse \
