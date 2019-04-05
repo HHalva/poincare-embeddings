@@ -6,7 +6,7 @@
 # LICENSE file in the root directory of this source tree.
 # Script to reproduct results
 
-DIMS="10"
+DIMS="100"
 MODEL="euclidean"
 
 while true; do
